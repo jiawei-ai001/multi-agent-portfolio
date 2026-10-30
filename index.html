@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="陈加伟的多 Agent 内容生产项目。通过预设交互体验岗位协作、人工审核与局部返工，查看真实图卡、配音和成片。">
+  <meta name="theme-color" content="#f7f8fa">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; connect-src 'none'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta property="og:title" content="陈加伟 · 多 Agent 协作工作台">
+  <meta property="og:description" content="四个岗位，两处人工审核。一套真实跑过的内容生产流程。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jiawei-agent-workflow.wwxa77.chatgpt.site">
+  <meta property="og:image" content="https://jiawei-agent-workflow.wwxa77.chatgpt.site/assets/normal-02.png">
+  <title>多 Agent 协作工作台 · 陈加伟的项目作品</title>
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#experience">跳到交互演示</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="多 Agent 协作工作台首页"><img src="assets/mark.svg" width="32" height="32" alt=""><span>协作工作台<span class="brand-sub">陈加伟 · 项目作品</span></span></a>
+    <nav aria-label="主导航"><a href="#experience">体验流程</a><a href="#results">真实成果</a><a href="#roles">岗位分工</a><a href="#boundaries">能力边界</a></nav>
+    <a class="nav-cta" href="#sop">查看 SOP <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="top">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-dot"></span> 多 AGENT 内容生产 · 公开演示</p>
+        <h1 id="hero-title">把一篇讲解稿，<br>交给一支<span class="accent">协作团队。</span></h1>
+        <p class="hero-lead">四个岗位各司其职，图卡与配音并行制作。<br class="desktop-break">在关键节点由人审核，最后交付带字幕的视频。</p>
+        <div class="hero-actions"><a class="button primary" href="#experience" data-action="hero-start">体验协作流程 <span aria-hidden="true">→</span></a><a class="button secondary" href="#results"><span aria-hidden="true">▷</span> 看真实成片</a></div>
+        <p class="demo-disclaimer">使用真实历史样例的预设演示，不会启动真实 Agent。</p>
+        <div class="hero-facts"><div><strong>4<span> 个</span></strong><span>独立岗位</span></div><div><strong>2<span> 处</span></strong><span>人工审核</span></div><div><strong>2<span> 条</span></strong><span>可交互演示</span></div></div>
+      </div>
+      <div class="hero-art" aria-label="真实图卡与协作流程预览">
+        <div class="artifact-top"><span><span class="small-dot"></span> 已有真实交付</span><span>案例 034</span></div>
+        <button class="hero-image" data-image="assets/normal-02.png" data-caption="《列表和字典怎么选》真实图卡 · 点击可查看原图" aria-label="放大查看真实图卡"><img src="assets/normal-02.png" alt="真实图卡：列表按位置拿内容" width="1920" height="1080"></button>
+        <div class="artifact-caption"><div><span class="mini-label">真实产物</span><strong>《列表和字典怎么选》</strong></div><span class="tag green">已人工验收</span></div>
+        <div class="mini-flow"><span>图卡</span><span class="flow-join">＋</span><span>配音</span><span class="flow-arrow">→</span><span class="human-chip">人工审核</span><span class="flow-arrow">→</span><span>成片</span></div>
+      </div>
+    </section>
+    <div class="ownership wrap"><span class="ownership-label">我做了什么</span><p>定义岗位边界与开工条件，安排交接和人工审核，验收最终结果。<span>代码实现、排错与测试借助 Codex 完成。</span></p><a href="#roles" aria-label="查看我的协作设计">查看设计 <span aria-hidden="true">↓</span></a></div>
+
+    <section id="experience" class="section wrap" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / 亲手走一遍</p><h2 id="experience-title">流程怎么协作，点一下就知道。</h2></div><p>选择场景，扮演审核人。<br>看看材料如何交到下一位手里。</p></div>
+      <div class="workbench">
+        <div class="bench-top"><div class="scenario-switch" role="group" aria-label="选择演示场景"><button class="active" data-mode="normal" aria-pressed="true">普通新篇</button><button data-mode="rework" aria-pressed="false">两图合一返工</button></div><div class="bench-tools"><span class="simulation-label">预设演示</span><button class="text-button" data-action="reset" aria-label="重置当前演示">↻ 重新开始</button></div></div>
+        <div class="bench-layout">
+          <aside class="bench-rail"><div class="rail-label">当前任务</div><h3 id="scenario-title">列表和字典怎么选</h3><p id="scenario-subtitle">从确认稿件到成片验收</p><ol class="step-list" id="step-list"></ol><div class="rail-note"><span aria-hidden="true">◎</span><p>操作只影响本页。<br>刷新后可重新体验。</p></div></aside>
+          <div class="bench-main"><div class="stage-title"><span id="stage-number">STEP 01</span><span class="tag" id="stage-status">准备开始</span></div><div id="demo-content"></div><div class="bench-message" id="demo-message" role="status" aria-live="polite"></div></div>
+        </div>
+        <div class="bench-footer"><span><span class="small-dot"></span> 样例文件来自已完成任务</span><span>本页操作为模拟，不代表实时生产或生成耗时</span></div>
+      </div>
+      <noscript><p class="noscript-note">交互演示需要浏览器启用 JavaScript。你仍可在下方查看真实成片、岗位说明和能力边界。</p></noscript>
+    </section>
+
+    <section id="results" class="section results-section" aria-labelledby="results-title"><div class="wrap">
+      <div class="section-heading"><div><p class="eyebrow">02 / 真实交付</p><h2 id="results-title">演示可以模拟，成果可以核对。</h2></div><p>这里播放的是实际生成并验收的文件，<br>不是网页效果图。</p></div>
+      <div class="result-layout">
+        <div class="film-shell"><div class="film-label"><span id="film-label">案例 034 · 普通新篇</span><span class="tag green">真实成片</span></div><video id="evidence-film" controls playsinline preload="none" poster="assets/normal-01.png" aria-label="列表和字典怎么选真实成片"><source src="assets/normal-film.mp4" type="video/mp4">你的浏览器不支持视频播放，可使用下方下载链接。</video><div class="film-bottom"><span id="film-duration">成片时长 58 秒</span><a id="film-download" href="assets/normal-film.mp4" download="列表和字典怎么选_真实成片.mp4">下载样片 ↓</a></div></div>
+        <div class="result-context"><div class="case-switch" role="group" aria-label="选择真实成果"><button class="active" data-evidence="normal" aria-pressed="true">034 普通新篇</button><button data-evidence="rework" aria-pressed="false">033 合图返工</button></div><h3 id="evidence-title">列表和字典怎么选</h3><p id="evidence-summary">四张图卡与完整配音，经审图、试听后交给剪辑，成片再次由人工验收。</p><dl id="evidence-facts"><div><dt>实际结果</dt><dd>4 张图卡、完整配音、带字幕视频</dd></div><div><dt>验收记录</dt><dd>2026年10月24日，成片已通过</dd></div><div><dt>验证范围</dt><dd>本篇无中途改码或手工修改任务状态</dd></div></dl><p class="fine-print">依据既有交付与人工验收记录整理。普通完成与修复后完成分别标明。</p></div>
+      </div>
+      <div class="asset-heading"><h3 id="asset-heading">这篇用到的真实图卡</h3><span>点击图片查看原图</span></div><div class="asset-strip" id="evidence-cards"></div>
+      <div class="sample-links" id="sample-links"><span>核对输入与配音</span><a href="assets/normal-manuscript.txt" download="最终讲解稿.txt">最终讲解稿 ↓</a><a href="assets/normal-narration.txt" download="配音朗读稿.txt">配音朗读稿 ↓</a><a href="assets/normal-voice.wav" download="完整配音.wav">完整配音 ↓</a></div>
+    </div></section>
+
+    <section id="roles" class="section wrap" aria-labelledby="roles-title"><div class="section-heading"><div><p class="eyebrow">03 / 协作设计</p><h2 id="roles-title">分清职责，也划清交接的线。</h2></div><p>点击一个岗位，查看它接什么、交什么，<br>以及什么时候才能开工。</p></div>
+      <div class="roles-grid" role="group" aria-label="查看岗位职责"><button class="role-card active" data-role="dispatch" aria-pressed="true"><span class="role-icon">01</span><strong>内容生产助手</strong><span>确认稿件，派发任务</span><span class="role-link">查看岗位 →</span></button><button class="role-card" data-role="cards" aria-pressed="false"><span class="role-icon">02</span><strong>Python 图卡员</strong><span>制作图卡，定向返工</span><span class="role-link">查看岗位 →</span></button><button class="role-card" data-role="voice" aria-pressed="false"><span class="role-icon">03</span><strong>配音员</strong><span>生成配音，按位置重配</span><span class="role-link">查看岗位 →</span></button><button class="role-card" data-role="editor" aria-pressed="false"><span class="role-icon">04</span><strong>剪辑员</strong><span>核对材料，交付成片</span><span class="role-link">查看岗位 →</span></button></div>
+      <div id="role-detail" class="role-detail"></div>
+      <div class="design-decisions"><article><span class="decision-number">A</span><h3>可以并行的，同时推进</h3><p>图卡和配音各自接收明确输入，可以独立制作；剪辑等待两路已审核材料齐备。</p></article><article><span class="decision-number">B</span><h3>交付成品，减少内部依赖</h3><p>删除剪辑反查配音制作历史的依赖，改用完整音频、朗读稿和字幕对应资料交接。</p></article><article><span class="decision-number">C</span><h3>局部修改，完整交接</h3><p>返工只改目标部分；审核后交给下游的是最新完整材料，避免新旧版本混用。</p></article></div>
+    </section>
+
+    <section id="sop" class="section sop-section"><div class="wrap sop-layout"><div class="sop-intro"><p class="eyebrow">04 / 留下方法</p><h2>把跑通的做法，<br>写成下一次的步骤。</h2><p>六步设计与验收 SOP。<br>每步都有动作、产物和完成条件。</p><a class="button secondary" href="assets/协作设计与验收SOP.txt" download>下载文字版 SOP ↓</a><p class="fine-print">根据本项目实践整理。已有同类流程复用记录，文档尚未经陌生人独立搭建验证。</p></div><div class="sop-steps" id="sop-steps"></div></div></section>
+
+    <section id="boundaries" class="section wrap"><div class="section-heading"><div><p class="eyebrow">05 / 能力边界</p><h2>能做到哪里，就展示到哪里。</h2></div></div><div class="boundary-grid"><article><span class="tag green">已有真实记录</span><h3>内容制作与协作</h3><ul><li>四岗位协作，图卡与配音并行</li><li>图卡定向修改、两图合一后完整交接</li><li>指定时间局部重配，保留其他好片段</li><li>人工审核、正式交付与成片验收</li></ul><p>不同能力对应不同案例，不表示全部异常分支均已验证。</p></article><article><span class="tag amber">仍由人决定</span><h3>质量与重要操作</h3><ul><li>确认最终稿和配音朗读稿</li><li>审图、试听，决定是否通过</li><li>检查成片，并手动上传发布</li><li>程序故障时与 Codex 排查、验收修复</li></ul><p>日常审核与故障修复，是不同的人工介入。</p></article><article><span class="tag">验证范围有限</span><h3>不扩大已经完成的事</h3><ul><li>已验证同类 Python 内容流程复用</li><li>跨行业迁移尚未验证</li><li>陌生人独立部署尚未验证</li><li>整机断电恢复、云端无人值守尚未完整验证</li></ul><p>公开网页的上线，不等于生产 Agent 已部署到云端。</p></article></div>
+      <div class="privacy-note"><div class="privacy-mark" aria-hidden="true">◈</div><div><strong>这是一个可体验的作品，不是生产入口。</strong><p>本页仅提供选定的公开样例。没有模型密钥，不连接飞书机器人和本机任务；点击按钮只切换浏览器里的演示状态，不生成新内容、不提交任务。</p></div></div>
+    </section>
+  </main>
+  <footer class="site-footer wrap"><div><strong>多 Agent 协作工作台</strong><span>陈加伟 · AI 工作流与 Agent 岗位设计</span></div><div><span>项目展示资料整理于 2026年10月</span><a href="#top">回到顶部 ↑</a></div></footer>
+  <dialog id="image-dialog" aria-labelledby="image-caption"><div class="dialog-top"><span id="image-caption"></span><button class="icon-button" data-action="close-image" aria-label="关闭原图">×</button></div><img id="dialog-image" alt=""><p>真实历史图卡 · 原图保留底部字幕区</p></dialog>
+</body>
+</html>
